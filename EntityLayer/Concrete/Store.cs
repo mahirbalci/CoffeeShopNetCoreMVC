@@ -14,6 +14,6 @@ namespace EntityLayer.Concrete
         public string SecondTitle { get; set; }
         public string Days { get; set; }
         public string ClockInfo { get; set; }
-        public int deneme { get; set; }
+      
     }
 }
