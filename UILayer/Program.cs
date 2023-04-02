@@ -1,7 +1,17 @@
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.EntityFramework;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+builder.Services.AddScoped<IHomeService, HomeManager>();
+builder.Services.AddScoped<IHomeDal, EfHomeDal>();
+builder.Services.AddScoped<IHomeContentService, HomeContentManager>();
+builder.Services.AddScoped<IHomeContentDal, EfHomeContentDal>();
+
 
 var app = builder.Build();
 
@@ -22,6 +32,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 app.Run();

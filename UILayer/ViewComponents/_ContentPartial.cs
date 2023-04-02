@@ -1,17 +1,18 @@
 ﻿using BusinessLayer.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PresentationLayer.Controllers
+namespace PresentationLayer.ViewComponents
 {
-    public class HomeController : Controller
+    public class _ContentPartial:ViewComponent
+
     {
         private readonly IHomeService _homeService;
-        public HomeController(IHomeService homeService)
+        public _ContentPartial(IHomeService homeService)
         {
             _homeService = homeService;
         }
 
-        public IActionResult Index()
+        public IViewComponentResult Invoke()
         {
             var result = _homeService.GetListAll();
             return View(result);
