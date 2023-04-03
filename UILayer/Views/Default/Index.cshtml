@@ -1,24 +1,13 @@
-﻿
-@{
-    Layout = null;
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-@await Html.PartialAsync("~/Views/DefaultPartials/_PartialHead.cshtml")
-<body>
-    @await Html.PartialAsync("~/Views/DefaultPartials/_PartialHeader.cshtml")
-  
-    @await Html.PartialAsync("~/Views/DefaultPartials/_PartialNavbar.cshtml")
+
 
     @await Component.InvokeAsync("_ContentPartial")
 
     @await Component.InvokeAsync("_HomeContentPartial")
 
-    @await Html.PartialAsync("~/Views/DefaultPartials/_PartialFooter.cshtml")
-
-    @await Html.PartialAsync("~/Views/DefaultPartials/_PartialScripts.cshtml")
-    
-</body>
-</html>
+  
 

@@ -11,6 +11,14 @@ builder.Services.AddScoped<IHomeService, HomeManager>();
 builder.Services.AddScoped<IHomeDal, EfHomeDal>();
 builder.Services.AddScoped<IHomeContentService, HomeContentManager>();
 builder.Services.AddScoped<IHomeContentDal, EfHomeContentDal>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
+builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+builder.Services.AddScoped<IStoreService, StoreManager>();
+builder.Services.AddScoped<IStoreDal, EfStoreDal>();
+builder.Services.AddScoped<IAddressService, AddressManager>();
+builder.Services.AddScoped<IAddressDal, EfAddressDal>();
+builder.Services.AddScoped<IProductService, ProductManager>();
+builder.Services.AddScoped<IProductDal, EfProductDal>();
 
 
 var app = builder.Build();
