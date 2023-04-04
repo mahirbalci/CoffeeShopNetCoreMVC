@@ -21,5 +21,6 @@ namespace DataAccessLayer.Contexts
         public DbSet<Product> Proudcts { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<HomeContent> HomeContents { get; set; }
+       
     }
 }

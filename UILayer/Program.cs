@@ -21,6 +21,8 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<IProductDal, EfProductDal>();
 
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

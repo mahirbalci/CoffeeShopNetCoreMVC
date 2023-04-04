@@ -9,7 +9,7 @@
 
 <section class="page-section cta">
     <div class="container">
-        
+
         <div class="row">
             <div class="col-xl-9 mx-auto">
                 <div class="cta-inner bg-faded text-center rounded">
@@ -18,33 +18,33 @@
                         <span class="section-heading-lower">Dükkan Açık</span>
                     </h2>
                     @foreach (var item in Model.Stores)
-        {
-
-                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                        <li class="list-unstyled-item list-hours-item d-flex">
-                            @item.Days
-                            <span class="ms-auto">@item.ClockInfo</span>
-                        </li>
-                 
-                    </ul>
-        }
-         @foreach (var item in Model.Addresses)
                     {
-                        
-                    
-                    <p class="address mb-5">
-                        <em>
-                            <strong>@item.Description</strong>
+
+                        <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                            <li class="list-unstyled-item list-hours-item d-flex">
+                                @item.Days
+                                <span class="ms-auto">@item.ClockInfo</span>
+                            </li>
+
+                        </ul>
+                    }
+                    @foreach (var item in Model.Addresses)
+                    {
+
+
+                        <p class="address mb-5">
+                            <em>
+                                <strong>@item.Description</strong>
+                                <br />
+                                @item.SeconDescription
+                            </em>
+                        </p>
+                        <p class="mb-0">
+                            <small><em>İstediğiniz Zaman Arayın</em></small>
                             <br />
-                            @item.SeconDescription
-                        </em>
-                    </p>
-                    <p class="mb-0">
-                        <small><em>İstediğiniz Zaman Arayın</em></small>
-                        <br />
-                        @item.Phone
-                    </p>
-            }
+                            @item.Phone
+                        </p>
+                    }
                 </div>
             </div>
         </div>
@@ -54,27 +54,26 @@
     <div class="container">
         @foreach (var item in Model.Abouts)
         {
-            
-        <img class="@item.ImageClass" src="@item.ImageUrl" alt="..." />
-        <div class="about-heading-content">
-            <div class="row">
-                <div class="col-xl-9 col-lg-10 mx-auto">
-                    <div class="bg-faded rounded p-5">
-                        <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">@item.Title</span>
-                            <span class="section-heading-lower">@item.SecondTitle</span>
-                        </h2>
-                        <p>@item.Description</p>
-                        <p class="mb-0">
-                           @item.SecondDescription
-                        </p>
+
+            <img class="@item.ImageClass" src="@item.ImageUrl" alt="..." />
+            <div class="about-heading-content">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 mx-auto">
+                        <div class="bg-faded rounded p-5">
+                            <h2 class="section-heading mb-4">
+                                <span class="section-heading-upper">@item.Title</span>
+                                <span class="section-heading-lower">@item.SecondTitle</span>
+                            </h2>
+                            <p>@item.Description</p>
+                            <p class="mb-0">
+                                @item.SecondDescription
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         }
     </div>
 
-       
-</section>
 
+</section>
