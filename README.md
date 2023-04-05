@@ -1,3 +1,3 @@
 # CoffeShopMVC
-Coffe Shop MVC Project
-In this project i used Generic Repository and N-Tier Architecture. I used Code first approach and Solid Principles. 
+Coffe Shop Net Core MVC Project
+In this project i used Generic Repository and N-Tier Architecture, Code first approach and Solid Principles, MSSQL 
